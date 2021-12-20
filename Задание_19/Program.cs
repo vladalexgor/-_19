@@ -98,11 +98,35 @@ namespace Задание_19
                     Console.WriteLine($"   {p.Code} {p.NamePC} {p.TypeCPU} {p.SpeedCPU} {p.CapacityRAM} {p.CapacityHD} {p.CapacityMemoryVC} {p.Cost} {p.Quantity}");
                 }
             }
-            #endregion*/
+            Console.WriteLine();
+            #endregion
+            #region Найти самый дорогой и самый бюджетный компьютер
+            int costMax = listPC
+                .Select(pc => pc.Cost)
+                .Max();
+            List<PC> pC5_1 = listPC
+                .Where(pc => pc.Cost == costMax)
+                .ToList();
+            foreach (var p in pC5_1)
+            {
+                Console.WriteLine($"Комп с максимальной ценой:\n{p.Code} {p.NamePC} {p.TypeCPU} {p.SpeedCPU} {p.CapacityRAM} {p.CapacityHD} {p.CapacityMemoryVC} {p.Cost} {p.Quantity}");
+            }
+            int costMin = listPC
+                .Select(pc => pc.Cost)
+                .Min();
+            List<PC> pC5_2 = listPC
+                .Where(pc => pc.Cost == costMin)
+                .ToList();
+            foreach (var p in pC5_2)
+            {
+                Console.WriteLine($"Комп с минимальной ценой:\n{p.Code} {p.NamePC} {p.TypeCPU} {p.SpeedCPU} {p.CapacityRAM} {p.CapacityHD} {p.CapacityMemoryVC} {p.Cost} {p.Quantity}");
+            }
+            Console.WriteLine();
+            #endregion
             #region Есть ли хотя бы один компьютер в количестве не менее 30 штук
             Console.WriteLine("Есть ли хотя бы один компьютер в количестве не менее 30 штук:");
             var pC6 = listPC
-                .Any(pc => pc.Quantity > 30);
+                .Any(pc => pc.Quantity >= 30);
             if (pC6)
             {
                 Console.WriteLine("Да");
@@ -111,49 +135,10 @@ namespace Задание_19
             {
                 Console.WriteLine("Нет");
             }
+            Console.WriteLine();
             #endregion
             Console.WriteLine("Для завершения программы нажмите любую клавишу.");
             Console.ReadKey();
-
-            /*//SQL подобный синтаксис:
-            List<Door> doors = (from d in listDoor
-                                where d.Material == "Дерево"
-                                select d).ToList();
-
-            //Синтаксис на основе методов расширений:
-            List<Door> doors = listDoor
-                .Where(d => d.Material == "Дерево")
-                .ToList();
-
-            var doors = listDoors
-                where(d => d.Cost>10000)
-                .Count();
-            Console.WriteLine(doors);*/
-
-
-            /*var doors = listDoors
-                .OrderBy(d=>d.Cost)
-                .ToList();*/
-
-
-            /*var doors = listDoors
-                .Select(d=>new
-                {
-                    Mater = d.Material
-                    Manuf = d.Manufacturer
-                })
-                .Distinct()
-                .ToList();
-
-            foreach (var s in doors)
-            {
-                Console.WriteLine($"{s.Mater} {s.Manuf}");
-            }*/
-
-            /*foreach (Door d in doors)
-            {
-                Console.WriteLine($"{d.Id} {d.Width} {d.Cost}");
-            }*/
         }
     }
 }
