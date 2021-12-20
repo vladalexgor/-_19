@@ -35,8 +35,8 @@ namespace Задание_19
             List<PC> listPC = new List<PC>()
             {
                 new PC(){Code = "001000", NamePC= "Dell", TypeCPU = "Intel Core I7", SpeedCPU = 3500, CapacityRAM = 16, CapacityHD = 256, CapacityMemoryVC = 8, Cost = 1500, Quantity = 14},
-                new PC(){Code = "002100", NamePC= "Sansung", TypeCPU = "Intel Core I5", SpeedCPU = 3700, CapacityRAM = 8, CapacityHD = 128, CapacityMemoryVC = 6, Cost = 1100, Quantity = 67},
-                new PC(){Code = "003460", NamePC= "Sansung", TypeCPU = "Intel Core I3", SpeedCPU = 3000, CapacityRAM = 4, CapacityHD = 512, CapacityMemoryVC = 4, Cost = 800, Quantity = 3},
+                new PC(){Code = "002100", NamePC= "Samsung", TypeCPU = "Intel Core I5", SpeedCPU = 3700, CapacityRAM = 8, CapacityHD = 128, CapacityMemoryVC = 6, Cost = 1100, Quantity = 67},
+                new PC(){Code = "003460", NamePC= "Samsung", TypeCPU = "Intel Core I3", SpeedCPU = 3000, CapacityRAM = 4, CapacityHD = 512, CapacityMemoryVC = 4, Cost = 800, Quantity = 3},
                 new PC(){Code = "004000", NamePC= "Apple", TypeCPU = "Apple M1", SpeedCPU = 2100, CapacityRAM = 16, CapacityHD = 256, CapacityMemoryVC = 8, Cost = 2000, Quantity = 50},
                 new PC(){Code = "005100", NamePC= "Sony", TypeCPU = "Intel Core I3", SpeedCPU = 3000, CapacityRAM = 4, CapacityHD = 512, CapacityMemoryVC = 4, Cost = 1000, Quantity = 6},
                 new PC(){Code = "006450", NamePC= "HP", TypeCPU = "Intel Core I5", SpeedCPU = 4000, CapacityRAM = 32, CapacityHD = 1024, CapacityMemoryVC = 10, Cost = 2500, Quantity = 120},
